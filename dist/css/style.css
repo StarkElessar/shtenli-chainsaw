@@ -439,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15), 0 0 10px 0 rgba(0, 0, 0, 0.15), 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 .promo__text {
-  min-width: calc(300px + 260 * ((100vw - 320px) / 1600));
+  min-width: calc(280px + 280 * ((100vw - 320px) / 1600));
   padding-right: calc(15px + 25 * ((100vw - 320px) / 1600));
 }
 @media (max-width: 830.98px) {
@@ -460,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: calc(24px + 36 * ((100vw - 320px) / 1600));
 }
 .promo__description {
-  font-size: calc(10px + 2 * ((100vw - 320px) / 880));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 880));
   line-height: 120%;
 }
 .promo__description:not(:last-child) {
@@ -468,8 +468,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .promo__btn {
   margin-top: calc(20px + 30 * ((100vw - 320px) / 1600));
-  padding-top: calc(12px + 20 * ((100vw - 320px) / 1600));
-  padding-bottom: calc(12px + 20 * ((100vw - 320px) / 1600));
+  padding-top: calc(20px + 16 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(20px + 16 * ((100vw - 320px) / 1600));
   padding-right: calc(38px + 24 * ((100vw - 320px) / 1600));
   padding-left: calc(66px + 14 * ((100vw - 320px) / 1600));
   color: #fff;
@@ -504,7 +504,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slider-promo {
-  max-width: calc(320px + 310 * ((100vw - 320px) / 1600));
+  max-width: calc(300px + 330 * ((100vw - 320px) / 1600));
 }
 .slider-promo__img {
   position: relative;
