@@ -60,7 +60,7 @@
 
   // .promo__text
   &__text {
-    @include adaptiveValue("min-width", 560, 300, 0);
+    @include adaptiveValue("min-width", 560, 280, 0);
     @include adaptiveValue("padding-right", 40, 15, 0);
     @media (max-width: 830.98px) {
       padding-right: 0;
@@ -82,7 +82,7 @@
   }
   // .promo__description
   &__description {
-    @include adaptiveFont(12, 10);
+    @include adaptiveFont(14, 10);
     line-height: 120%;
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 20, 8, 0);
@@ -91,8 +91,8 @@
   // .promo__btn
   &__btn {
     @include adaptiveValue("margin-top", 50, 20, 0);
-    @include adaptiveValue("padding-top", 32, 12, 0);
-    @include adaptiveValue("padding-bottom", 32, 12, 0);
+    @include adaptiveValue("padding-top", 36, 20, 0);
+    @include adaptiveValue("padding-bottom", 36, 20, 0);
     @include adaptiveValue("padding-right", 62, 38, 0);
     @include adaptiveValue("padding-left", 80, 66, 0);
     color: $whiteColor;
@@ -125,7 +125,7 @@
   }
 }
 .slider-promo {
-  @include adaptiveValue("max-width", 630, 320, 0);
+  @include adaptiveValue("max-width", 630, 300, 0);
   // .slider-promo__wrapper
   &__wrapper {
   }
