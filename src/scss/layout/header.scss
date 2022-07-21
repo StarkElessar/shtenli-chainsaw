@@ -1,4 +1,8 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: $headerHeight;
   // .header__container
   &__container {
@@ -88,6 +92,7 @@
   }
   // .menu__link
   &__link {
+    display: block;
     height: 100%;
     @include adaptiveValue('padding-left', 18, 5, 0);
     @include adaptiveValue('padding-right', 18, 5, 0);
