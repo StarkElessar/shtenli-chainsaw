@@ -11,13 +11,12 @@ const promoSlider = new Swiper('.swiper', {
   speed: 900,
   effect: 'fade',
   autoplay: {
-    delay: 7000,
+    delay: 3000,
   },
   direction: 'horizontal',
   loop: true,
   pagination: {
     el: '.slider-promo__pagination'
   },
-  speed: 400,
   slidesPerView: 1,
 })
