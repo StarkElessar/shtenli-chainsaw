@@ -19,6 +19,7 @@
 }
 .page {
   flex: 1 1 auto;
+  padding-top: $headerHeight;
 
   &__start {
     padding-top: $headerHeight;
