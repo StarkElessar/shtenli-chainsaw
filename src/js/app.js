@@ -2,6 +2,7 @@ import * as flsFunctions from './modules/functions.js'
 
 flsFunctions.isWebp()
 flsFunctions.windowPopup()
+flsFunctions.changeValue()
 
 import Swiper, { Pagination, Autoplay, EffectFade } from 'swiper'
 
