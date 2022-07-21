@@ -4,7 +4,11 @@
 @import 'config/reset';
 @import 'config/global';
 
+// @import 'swiper-bundle';
+@import 'swiper/swiper';
+
 @import 'layout/header';
+@import 'layout/promo';
 @import 'layout/footer';
 
 @import 'popup/popup-menu';
