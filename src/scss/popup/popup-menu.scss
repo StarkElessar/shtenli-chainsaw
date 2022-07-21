@@ -12,6 +12,7 @@
   visibility: hidden;
   opacity: 0;
   transition: $standartTrans;
+  z-index: 500;
   &.popup-menu_show {
     visibility: visible;
     opacity: 1;
