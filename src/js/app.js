@@ -3,6 +3,7 @@ import * as flsFunctions from './modules/functions.js'
 flsFunctions.isWebp()
 flsFunctions.windowPopup()
 flsFunctions.changeValue()
+flsFunctions.stickyHeader()
 
 import Swiper, { Pagination, Autoplay, EffectFade } from 'swiper'
 
