@@ -68,7 +68,7 @@
   }
   // .promo__title
   &__title {
-    @include adaptiveValue("margin-top", 30, 18, 0);
+    @include adaptiveValue("margin-top", 40, 25, 0);
     font-weight: 700;
     @include adaptiveFont(54, 40);
     @include adaptiveValue("line-height", 60, 36, 0);
@@ -78,11 +78,11 @@
     @include adaptiveFont(30, 21);
     @include adaptiveValue("line-height", 40, 24, 0);
     color: $grayColor;
-    @include adaptiveValue("margin-bottom", 60, 24, 0);
+    @include adaptiveValue("margin-bottom", 60, 30, 0);
   }
   // .promo__description
   &__description {
-    @include adaptiveFont(14, 10);
+    @include adaptiveFont(14, 12);
     line-height: 120%;
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 20, 8, 0);
@@ -93,8 +93,8 @@
     @include adaptiveValue("margin-top", 50, 20, 0);
     @include adaptiveValue("padding-top", 36, 20, 0);
     @include adaptiveValue("padding-bottom", 36, 20, 0);
-    @include adaptiveValue("padding-right", 62, 38, 0);
-    @include adaptiveValue("padding-left", 80, 66, 0);
+    @include adaptiveValue("padding-right", 62, 40, 0);
+    @include adaptiveValue("padding-left", 80, 60, 0);
     color: $whiteColor;
     @include adaptiveFont(18, 14);
     letter-spacing: 1.1em;
@@ -103,6 +103,7 @@
     transition: $standartTrans;
     @media (max-width: 425.98px) {
       display: block;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -125,7 +126,7 @@
   }
 }
 .slider-promo {
-  @include adaptiveValue("max-width", 630, 300, 0);
+  @include adaptiveValue("max-width", 620, 300, 0);
   // .slider-promo__wrapper
   &__wrapper {
   }
@@ -205,6 +206,7 @@
   }
   // .feature-list__title
   &__title {
+    min-width: 40px;
     text-align: center;
     font-weight: 700;
     line-height: 17px;
