@@ -19,6 +19,7 @@ export function windowPopup() {
   const popupMenu = document.querySelector('.popup-menu')
 
   burgerBtn.onclick = () => {
+    setBodyLock()
     popupMenu.classList.add('popup-menu_show')
   }
 
@@ -28,9 +29,48 @@ export function windowPopup() {
     const closeBtn = target.closest('button')
 
     if (wrapper || closeBtn) {
+      setBodyUnLock()
       popupMenu.classList.remove('popup-menu_show')
     }
   }
+}
+
+export const setBodyLock = () => {
+  const lockPaddingElements = document.querySelectorAll('.lock-padding')
+  const lockPosition = document.querySelector('.lock-position')
+  const body = document.querySelector('body')
+  const pageWrapper = document.querySelector('.page')
+  const lockPaddingValue = window.innerWidth - pageWrapper.offsetWidth
+
+  if (lockPaddingElements.length > 0) {
+    lockPaddingElements.forEach((element) => {
+      element.style.paddingRight = `${lockPaddingValue}px`
+      element.style.transition = 'none'
+    })
+    if (lockPosition) {
+      lockPosition.style.right = 12 + lockPaddingValue + 'px'
+    }
+    body.style.paddingRight = `${lockPaddingValue}px`
+    body.classList.add('lock')
+  }
+}
+
+export const setBodyUnLock = () => {
+  const lockPaddingElements = document.querySelectorAll('.lock-padding')
+  const lockPosition = document.querySelector('.lock-position')
+  const body = document.querySelector('body')
+
+  if (lockPaddingElements.length > 0) {
+    lockPaddingElements.forEach((element) => {
+      element.style.paddingRight = '0px'
+      element.style.transition = ''
+    })
+  }
+  if (lockPosition) {
+    lockPosition.style.right = '12px'
+  }
+  body.style.paddingRight = '0px'
+  body.classList.remove('lock')
 }
 
 export function changeValue() {
@@ -91,9 +131,9 @@ export function changeValue() {
   }
 
   function animationNumber(currentPrice, priceLabel) {
-    const time        = 150
-    const stepNumber  = 72
-    let counterPrice  = 0
+    const time = 150
+    const stepNumber = 72
+    let counterPrice = 0
 
     const timeInterval = Math.round(time / (currentPrice / stepNumber))
     const intervalChangeNumber = setInterval(() => {
@@ -126,5 +166,12 @@ export function changeValue() {
 
     setValue()
     form.addEventListener('input', setValue)
+  })
+}
+
+export function stickyHeader() {
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header')
+    header.classList.toggle('sticky', document.documentElement.scrollTop > 400)
   })
 }
