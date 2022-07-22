@@ -51,6 +51,7 @@
   }
   // .header__burger-btn
   &__burger-btn {
+    display: none;
     @media (max-width: 768.98px) {
       width: 30px;
       height: 30px;
