@@ -4,6 +4,25 @@
   left: 0;
   width: 100%;
   height: $headerHeight;
+  transition: height 250ms ease-in-out;
+
+  &.sticky {
+    position: fixed;
+    height: $headerHeight - 40;
+    background: rgba($whiteColor, 90%);
+    box-shadow: $lightBoxShadow;
+    z-index: 20;
+    & .header__logo {
+      line-height: $headerHeight - 40;
+    }
+    & .header__burger-btn {
+      width: 20px;
+      height: 20px;
+    }
+    & .menu__link {
+      line-height: $headerHeight - 40;
+    }
+  }
   // .header__container
   &__container {
     height: 100%;
