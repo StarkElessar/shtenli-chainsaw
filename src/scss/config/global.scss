@@ -11,6 +11,11 @@
   border-radius: 10px;
   background-color: #f9f9fd;
 }
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
 .wrapper {
   min-height: 100%;
   overflow: hidden;
