@@ -101,6 +101,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f9f9fd;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -291,6 +295,24 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100px;
+  transition: height 250ms ease-in-out;
+}
+.header.sticky {
+  position: fixed;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1), 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+.header.sticky .header__logo {
+  line-height: 60px;
+}
+.header.sticky .header__burger-btn {
+  width: 20px;
+  height: 20px;
+}
+.header.sticky .menu__link {
+  line-height: 60px;
 }
 .header__container {
   height: 100%;
@@ -887,6 +909,13 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
   opacity: 1;
 }
+.popup-menu.popup-menu_show .popup-menu__item {
+  transform: translateX(0%);
+}
+.popup-menu.popup-menu_show .popup-menu__phone, .popup-menu.popup-menu_show .popup-menu__time-title, .popup-menu.popup-menu_show .popup-menu__time {
+  transform: translateY(0);
+  opacity: 1;
+}
 .popup-menu__close-btn {
   position: absolute;
   top: 40px;
@@ -898,6 +927,21 @@ h1, h2, h3, h4, h5, h6 {
 .popup-menu__close-btn:hover svg path {
   transition: all 280ms ease 0ms;
   fill: #ff4040;
+}
+.popup-menu__nav {
+  transition: all 250ms ease-in-out;
+}
+.popup-menu__item {
+  transform: translateX(-150%);
+}
+.popup-menu__item:nth-child(1) {
+  transition: all 280ms ease-in-out 0ms;
+}
+.popup-menu__item:nth-child(2) {
+  transition: all 280ms ease-in-out 40ms;
+}
+.popup-menu__item:nth-child(3) {
+  transition: all 280ms ease-in-out 80ms;
 }
 .popup-menu__item:not(:last-child) {
   margin-bottom: 40px;
@@ -919,7 +963,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 20px 0;
   background: #131313;
+  transform: translateY(70px);
+  opacity: 0;
   transition: all 280ms ease 0ms;
+  transition-delay: 140ms;
 }
 .popup-menu__phone:hover {
   background: #ff4040;
@@ -928,4 +975,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 10px;
+  transform: translateY(70px);
+  opacity: 0;
+  transition: all 280ms ease 0ms;
+  transition-delay: 180ms;
+}
+.popup-menu__time {
+  transform: translateY(70px);
+  opacity: 0;
+  transition: all 280ms ease 0ms;
+  transition-delay: 220ms;
 }
