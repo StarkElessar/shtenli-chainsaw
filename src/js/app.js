@@ -6,12 +6,15 @@ flsFunctions.changeValue()
 
 import Swiper, { Pagination, Autoplay, EffectFade } from 'swiper'
 
-const promoSlider = new Swiper('.swiper', {
+new Swiper('.slider-promo', {
   modules: [Pagination, Autoplay, EffectFade],
-  speed: 900,
+  speed: 400,
   effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
   autoplay: {
-    delay: 3000,
+    delay: 2000,
   },
   direction: 'horizontal',
   loop: true,
@@ -19,4 +22,19 @@ const promoSlider = new Swiper('.swiper', {
     el: '.slider-promo__pagination'
   },
   slidesPerView: 1,
+})
+
+new Swiper('.product-image__slider', {
+  modules: [Pagination, Autoplay],
+  direction: 'horizontal',
+  speed: 600,
+  autoplay: {
+    delay: 2000,
+  },
+  loop: true,
+  pagination: {
+    el: '.product-image__pagination'
+  },
+  slidesPerView: 1,
+  spaceBetween: 52
 })
