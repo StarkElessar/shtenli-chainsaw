@@ -1,5 +1,5 @@
 .description {
-  @include adaptiveValue('padding-bottom', 150, 40, 1);
+  @include adaptiveValue("padding-top", 80, 20, 0);
   // .description__container
   &__container {
     display: flex;
