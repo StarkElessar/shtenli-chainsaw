@@ -1,5 +1,5 @@
 .features {
-  @include adaptiveValue("padding-bottom", 150, 40, 1);
+  @include adaptiveValue('padding-top', 100, 40, 1);
   // .features__container
   &__container {
     display: flex;
