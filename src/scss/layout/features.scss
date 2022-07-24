@@ -76,8 +76,7 @@
     }
     & th {
       font-weight: 700;
-      @include adaptiveFont(14, 10);
-      line-height: 17px;
+      line-height: 100%;
       text-transform: uppercase;
       color: $whiteColor;
     }
@@ -94,12 +93,10 @@
     flex: 1 0 50%;
     line-height: 120%;
     @include adaptiveValue('padding-right', 10, 5, 1);
-    @include adaptiveFont(14, 10);
   }
   // .block-table__description
   &__description {
     flex: 1 1 50%;
     line-height: 120%;
-    @include adaptiveFont(14, 10);
   }
 }
