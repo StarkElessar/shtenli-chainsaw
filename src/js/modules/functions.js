@@ -175,3 +175,44 @@ export function stickyHeader() {
     header.classList.toggle('sticky', document.documentElement.scrollTop > 400)
   })
 }
+
+export function followingLinks() {
+  const menuNav = document.querySelector('.menu__list')
+
+  menuNav.onclick = ((event) => {
+    const getId = (link) => link.getAttribute('href').replace('#', '')
+
+    if (event.target.classList.contains('__link')) {
+      event.preventDefault()
+
+      window.scrollTo({
+        top: document.getElementById(getId(event.target)).offsetTop,
+        behavior: 'smooth',
+      })
+    }
+  })
+}
+
+export function goTopBtn() {
+  const goTopBtn = document.querySelector('.back-to-top')
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset
+    const coords = document.documentElement.clientHeight
+    
+    if (scrolled > coords) {
+      goTopBtn.classList.add('back-to-top_show')
+    }
+    if (scrolled < coords) {
+      goTopBtn.classList.remove('back-to-top_show')
+    }
+  })
+
+  goTopBtn.addEventListener('click', function backToTop() {
+    const scrolled = window.pageYOffset
+
+    if (scrolled > 0) {
+      window.scrollBy(0, -30)
+      setTimeout(backToTop, 3)
+    }
+  })
+}
