@@ -844,8 +844,7 @@ body.lock {
 }
 .block-table__title th {
   font-weight: 700;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 880));
-  line-height: 17px;
+  line-height: 100%;
   text-transform: uppercase;
   color: #fff;
 }
@@ -864,7 +863,6 @@ body.lock {
   flex: 1 0 50%;
   line-height: 120%;
   padding-right: 10px;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 880));
 }
 @media (max-width: 1200px) {
   .block-table__key {
@@ -874,7 +872,6 @@ body.lock {
 .block-table__description {
   flex: 1 1 50%;
   line-height: 120%;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 880));
 }
 
 .product-image {
