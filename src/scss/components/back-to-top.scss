@@ -1,0 +1,33 @@
+.back-to-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($blackColor, 2%);
+  cursor: pointer;
+  transition: $standartTrans;
+  opacity: 0;
+  visibility: hidden;
+  &.back-to-top_show {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover {
+    background: rgba($blackColor, 5%);
+  }
+  // .back-to-top__btn
+  &__btn {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    opacity: 0.1;
+    transition: $standartTrans;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
