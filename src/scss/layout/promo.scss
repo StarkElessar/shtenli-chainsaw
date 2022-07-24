@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include adaptiveValue("padding-bottom", 40, 18, 0);
   @media (max-width: 830.98px) {
     min-height: 100%;
   }
