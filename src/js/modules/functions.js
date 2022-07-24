@@ -177,10 +177,13 @@ export function stickyHeader() {
 }
 
 export function followingLinks() {
-  const menuNav = document.querySelector('.menu__list')
+  const popupMenu = document.querySelector('.popup-menu')
+  let isLock = false
 
-  menuNav.onclick = ((event) => {
+  document.onclick = ((event) => {
     const getId = (link) => link.getAttribute('href').replace('#', '')
+
+    isLock = true
 
     if (event.target.classList.contains('__link')) {
       event.preventDefault()
@@ -189,6 +192,11 @@ export function followingLinks() {
         top: document.getElementById(getId(event.target)).offsetTop,
         behavior: 'smooth',
       })
+      if (isLock) {
+        popupMenu.classList.remove('popup-menu_show')
+        setBodyUnLock()
+        isLock = false
+      }
     }
   })
 }
