@@ -4,6 +4,8 @@ flsFunctions.isWebp()
 flsFunctions.windowPopup()
 flsFunctions.changeValue()
 flsFunctions.stickyHeader()
+flsFunctions.goTopBtn()
+flsFunctions.followingLinks()
 
 import Swiper, { Pagination, Autoplay, EffectFade } from 'swiper'
 
