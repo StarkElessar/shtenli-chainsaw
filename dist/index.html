@@ -16,13 +16,13 @@
     <nav class="header__menu menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link" href="#">Описание</a>
+          <a class="menu__link __link" href="#description">Описание</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Характеристики</a>
+          <a class="menu__link __link" href="#features">Характеристики</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Стоимость</a>
+          <a class="menu__link __link" href="#product-image">Фотографии</a>
         </li>
       </ul>
     </nav>
@@ -137,7 +137,7 @@
     </form>
   </div>
 </section>
-        <section class="page__description description">
+        <section class="page__description description" id="description">
   <div class="description__container">
     <div class="description__image">
       <img src="./images/description/01.jpg" alt="Description Image">
@@ -178,7 +178,7 @@
     </div>
   </div>
 </section>
-        <section class="page__features features">
+        <section class="page__features features" id="features">
   <div class="features__container">
     <div class="features__table">
       <h4 class="features__title">Характеристики</h4>
@@ -268,7 +268,7 @@
     </div>
   </div>
 </section>
-        <section class="page__product-image product-image">
+        <section class="page__product-image product-image" id="product-image">
   <div class="product-image__container">
     <div class="swiper product-image__slider">
       <div class="swiper-pagination product-image__pagination"></div>
@@ -392,6 +392,26 @@
     <h6 class="popup-menu__time-title">Время работы консультанта:</h6>
     <span class="popup-menu__time">с 08:00 до 23:00</span>
   </nav>
+</div>
+    <div class="back-to-top">
+  <button class="back-to-top__btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path
+        d="M384 32H64C28.65 
+        32 0 60.65 0 96v320c0 
+        35.34 28.65 64 64 
+        64h320c35.35 0 64-28.66 
+        64-64V96C448 60.65 419.3 
+        32 384 32zM349.1 305.6C346.2 
+        314.3 337.5 320 328 
+        320h-208c-9.531 0-18.19-5.656-22-14.41C94.19 
+        296.8 95.91 286.7 102.4 
+        279.7l104-112c9.125-9.75 
+        26.06-9.75 35.19 0l104 
+        112C352.1 286.7 353.8 
+        296.8 349.1 305.6z" />
+    </svg>
+  </button>
 </div>
     <script src="js/app.min.js"></script>
   </body>
