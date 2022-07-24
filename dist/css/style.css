@@ -1131,9 +1131,9 @@ body.lock {
 
 .back-to-top {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 80px;
+  width: calc(40px + 40 * ((100vw - 320px) / 1600));
   height: 100%;
   display: flex;
   align-items: center;
@@ -1143,6 +1143,12 @@ body.lock {
   transition: all 280ms ease 0ms;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
+}
+@media (max-width: 1300.98px) {
+  .back-to-top {
+    height: 80px;
+  }
 }
 .back-to-top.back-to-top_show {
   opacity: 1;
@@ -1152,11 +1158,23 @@ body.lock {
   background: rgba(19, 19, 19, 0.05);
 }
 .back-to-top__btn {
+  position: relative;
   width: 40px;
   height: 40px;
   background: transparent;
   opacity: 0.1;
   transition: all 280ms ease 0ms;
+  z-index: 3;
+}
+@media (max-width: 600.98px) {
+  .back-to-top__btn {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+  }
+  .back-to-top__btn:hover {
+    opacity: 1;
+  }
 }
 .back-to-top__btn:hover {
   opacity: 0.6;
